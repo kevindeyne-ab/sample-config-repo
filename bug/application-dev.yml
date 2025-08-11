@@ -9,7 +9,6 @@ spring:
   cloud:
     config:
       uri: https://github.com/kevindeyne-ab/sample-config-repo.git
-      fail-fast: true
   profiles:
     active: dev
 
