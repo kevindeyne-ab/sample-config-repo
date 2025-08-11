@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bug
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: https://github.com/kevindeyne-ab/sample-config-repo.git
+      fail-fast: true
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      base-path: /v1/actuator
+    exposure:
+      include: health, info
